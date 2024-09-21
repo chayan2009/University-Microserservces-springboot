@@ -1,5 +1,7 @@
 package com.university.student_service.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,5 +17,7 @@ public class StudentDTO {
     private String name;
     private String email;
     private String phonenumber;
+    @JsonProperty("address") // Change the name to "address" if needed
+    private AddressDTO addressDTO; // Add this line
 
 }
